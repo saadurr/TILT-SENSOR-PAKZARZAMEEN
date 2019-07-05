@@ -1,3 +1,6 @@
+//Saad Ur Rehman
+//Development of Tilt Sensor
+//Pak Zar Zameen
 #include "main.h"
 
 
