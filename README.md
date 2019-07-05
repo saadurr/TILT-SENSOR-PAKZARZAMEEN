@@ -1,7 +1,6 @@
 # TILT-SENSOR-PAKZARZAMEEN
 Tilt Sensor with ADICUP360 and NodeMCU (ESP8266)
 
-
 ooooooooo.             oooo              oooooooooooo                          oooooooooooo                                                             
 `888   `Y88.           `888             d'""""""d888'                         d'""""""d888'                                                             
  888   .d88'  .oooo.    888  oooo             .888P    .oooo.   oooo d8b            .888P    .oooo.   ooo. .oo.  .oo.    .ooooo.   .ooooo.  ooo. .oo.   
