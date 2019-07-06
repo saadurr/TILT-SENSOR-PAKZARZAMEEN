@@ -4,24 +4,24 @@ void serialReceive()
   adicup.listen();
   recvWithStartEndMarkers();
 
-  for (int i = 0; i < 5; i++) //Take Five Values of Each Reading and then average
+  //  for (int i = 0; i < 5; i++) //Take Five Values of Each Reading and then average
+  //  {
+  if (newData == true)
   {
-    if (newData == true)
-    {
-      strcpy(tempChars, receivedChars);
-      parseData();
-      //    showParsedData();
-      newData = false;
-    }
-    pitch_avg = pitch + pitch_avg;
-    roll_avg = roll + roll_avg;
+    strcpy(tempChars, receivedChars);
+    parseData();
+    //    showParsedData();
+    newData = false;
   }
-  pitch_avg = pitch_avg / 5; // calculate average
-  roll_avg = roll_avg / 5; //
-  Serial.println("Average Value of Pitch: ");
-  Serial.println(pitch_avg);
-  Serial.println("Average Value of Roll: ");
-  Serial.println(roll_avg);
+//  pitch_avg = pitch + pitch_avg;
+//  roll_avg = roll + roll_avg;
+  //  }
+  //  pitch_avg = pitch_avg / 5; // calculate average
+  //  roll_avg = roll_avg / 5; //
+  //  Serial.println("Average Value of Pitch: ");
+  //  Serial.println(pitch_avg);
+  //  Serial.println("Average Value of Roll: ");
+  //  Serial.println(roll_avg);
   //  pitch = pitch_avg;
   //  roll = roll_avg;
   showParsedData();

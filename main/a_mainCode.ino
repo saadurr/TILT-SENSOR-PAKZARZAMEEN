@@ -1,20 +1,30 @@
-//Saad Ur Rehman
-//Development of Tilt Sensor
-//Pak Zar Zameen
+/*
+ * Developer Name: Saad Ur Rehman
+ * Project Name: Development of a Low-Cost Tilt Sensing System for Construction Health Monitoring
+ * Project by: Pak Zar Zameen
+ * Supervisor: Dr. Waqar Shahid Qureshi
+ * Research Funded by: AIT Solutions
+ */
+
 #include "main.h"
 
 
 void setup() {
   Serial.begin(9600);
   Blynk.begin(auth, ssid, pass);
-  mySerial.begin(115200);
+  adicup.begin(115200);
   Serial.println();
   timer.setInterval(1000L, upload);
-  pinMode(interruptPin, INPUT); //pin for interrupt
+  time_start = millis();
 }
 
 void loop() {
   serialReceive();
+  
   Blynk.run();
   timer.run(); // Initiates BlynkTimer
+  
+  sleepTimer(); //calculate time
+  if (time_now >= OFF_TIME)
+    enterSleep();
 }
