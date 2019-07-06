@@ -1,3 +1,5 @@
+/*This will only be used when Arduino Nano is being used. For NodeMCU, the functions will not work. Deep sleep mode will be used
+instead which can be found in the ESP8266.h library*/
 void wakeInterrupt(void)
 {
   /* This will bring us back from sleep. */
