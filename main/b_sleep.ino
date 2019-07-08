@@ -9,5 +9,5 @@ void enterSleep(void)
   /* Copy contents and go to sleep*/
   Serial.println("***Entering Sleep****");
   delay(2000);
-  ESP.deepSleep(0); /*Sleep Forever until RST pin is set LOW*/
+//  ESP.deepSleep(0); /*Sleep Forever until RST pin is set LOW*/
 }
